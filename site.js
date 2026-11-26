@@ -395,12 +395,19 @@ function applyLanguage(lang) {
 
 // Splash hide helper
 function hideSplash() {
-  const splash = document.getElementById('site-splash-loader');
-  if (splash) {
-    splash.classList.add('hidden');
-    setTimeout(() => {
-      splash.style.display = 'none';
-    }, 600);
+  const ids = ['splash-screen', 'site-splash-loader'];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.classList.add('fade-out', 'hidden');
+      el.style.opacity = '0';
+      el.style.pointerEvents = 'none';
+      setTimeout(() => {
+        el.style.display = 'none';
+      }, 500);
+    }
+  });
+}, 600);
   }
 }
 
