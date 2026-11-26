@@ -1,0 +1,1042 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth notranslate" translate="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awtar United | Catering & Hospitality</title>
+  <meta name="description" content="Awtar United provides catering and hospitality services for events, gatherings, and large projects in Riyadh." />
+  <meta name="google" content="notranslate" />
+
+  <link rel="icon" href="logo1.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="logo1.png" type="image/png" sizes="192x192" />
+  <link rel="shortcut icon" href="logo1.png" type="image/png" />
+  <link rel="apple-touch-icon" href="logo1.png" />
+  <meta property="og:title" content="Awtar United | Catering & Hospitality" />
+  <meta property="og:description" content="Catering and hospitality for events, gatherings, and large projects in Riyadh." />
+  <meta property="og:image" content="logo1.png" />
+  <meta name="theme-color" content="#1b1813" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Noto+Sans+Arabic:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+
+  <style>
+    :root {
+      --gold: #C89A2C;
+      --goldLight: #F1D694;
+      --cream: #EEE7D8;
+      --creamSoft: #F8F2E7;
+      --dark: #1b1813;
+      --text: #2f2a22;
+      --muted: #746b5f;
+      --white: #FFFDF8;
+      --line: rgba(47,42,34,.12);
+      --shadow: 0 28px 80px rgba(30,23,13,.14);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .notranslate { translate: no; }
+
+    body.rtl {
+      font-family: 'Noto Sans Arabic', sans-serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    body.rtl .material-symbols-outlined { transform: scaleX(-1); }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button { font-family: inherit; }
+
+    .site-shell {
+      width: min(100%, 1480px);
+      margin: 0 auto;
+      background: var(--creamSoft);
+      overflow: hidden;
+    }
+
+    .top-nav {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6vw;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(100%, 1480px);
+      z-index: 1000;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .top-nav.scrolled {
+      background: rgba(27, 24, 19, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(238, 231, 216, 0.1);
+    }
+
+    .nav-left, .nav-right { display: flex; align-items: center; gap: 32px; }
+    .nav-right { justify-content: flex-end; }
+
+    .top-nav a, .top-nav button {
+      color: rgba(255, 248, 234, 0.88);
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: .75rem;
+      font-weight: 700;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color .25s ease;
+      padding: 8px 0;
+    }
+
+    .top-nav a:hover, .top-nav button:hover, .top-nav a.active { color: var(--cream); }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border: 1px solid rgba(238, 231, 216, 0.35) !important;
+      border-radius: 40px;
+      letter-spacing: .08em !important;
+      line-height: 1;
+      min-width: 78px;
+    }
+
+    .language-switch .lang-en,
+    .language-switch .lang-ar {
+      opacity: .55;
+      transition: opacity .25s ease, color .25s ease;
+    }
+
+    .language-switch .lang-separator { opacity: .4; font-size: .75rem; }
+
+    html[lang="en"] .language-switch .lang-en,
+    html[lang="ar"] .language-switch .lang-ar {
+      color: var(--goldLight);
+      opacity: 1;
+    }
+
+    .mobile-language-switch {
+      margin-top: 8px;
+      display: inline-flex !important;
+      width: auto !important;
+      margin-left: auto;
+      margin-right: auto;
+      border-color: rgba(238, 231, 216, 0.2) !important;
+    }
+
+    .top-nav a.active::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 8px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .brand { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .brand img { width: 88px; height: 68px; object-fit: contain; filter: brightness(1.12); transition: transform 0.2s ease; }
+    .brand img:hover { transform: scale(1.02); }
+
+    .mobile-menu-btn {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(238, 231, 216, 0.3);
+      border-radius: 12px;
+      color: var(--cream);
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .mobile-panel {
+      display: none;
+      background: rgba(27, 24, 19, 0.97);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(238, 231, 216, .12);
+      padding: 20px 24px;
+      text-align: center;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      width: 100%;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-panel a, .mobile-panel button {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      color: rgba(238, 231, 216, .88);
+      background: transparent;
+      border: 0;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 620px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #111;
+      border-radius: 34px 34px 0 0;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.05s ease-in-out;
+    }
+
+    .hero-slide.active { opacity: 1; }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      filter: brightness(1.02) saturate(.98);
+      animation: heroZoom 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+        radial-gradient(circle at 78% 24%, rgba(200,154,44,.18), transparent 28%),
+        linear-gradient(90deg, rgba(0,0,0,.70), rgba(0,0,0,.40), rgba(0,0,0,.18)),
+        linear-gradient(to top, rgba(0,0,0,.35), transparent 45%);
+    }
+
+    body.rtl .hero-overlay {
+      background:
+        radial-gradient(circle at 22% 24%, rgba(200,154,44,.18), transparent 28%),
+        linear-gradient(270deg, rgba(0,0,0,.70), rgba(0,0,0,.40), rgba(0,0,0,.18)),
+        linear-gradient(to top, rgba(0,0,0,.35), transparent 45%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 5;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      padding: 0 8vw;
+    }
+
+    .hero-copy { max-width: 820px; color: #fff; }
+    body.rtl .hero-copy { margin-left: auto; text-align: right; }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--goldLight);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      text-shadow: 0 8px 20px rgba(0,0,0,.32);
+    }
+
+    .hero-label::before {
+      content: '';
+      width: 38px;
+      height: 4px;
+      background: var(--gold);
+      display: inline-block;
+      border-radius: 999px;
+    }
+
+    body.rtl .hero-label::before { order: 2; }
+
+    .hero-title {
+      max-width: 820px;
+      color: #FFF8EA;
+      font-size: clamp(3rem, 6.2vw, 6rem);
+      line-height: 1.05;
+      letter-spacing: -.05em;
+      font-weight: 800;
+      text-shadow: 0 16px 36px rgba(0,0,0,.38);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .hero-title span { color: var(--goldLight); }
+
+    .hero-desc {
+      max-width: 610px;
+      color: rgba(255,248,234,.90);
+      line-height: 1.7;
+      font-size: 1rem;
+      margin-top: 22px;
+      text-shadow: 0 8px 20px rgba(0,0,0,.32);
+      transition: opacity .3s ease, transform .3s ease;
+    }
+
+    .hero-title.changing, .hero-desc.changing { opacity: 0; transform: translateY(14px); }
+
+    .hero-dots {
+      position: absolute;
+      left: 50%;
+      bottom: 34px;
+      z-index: 10;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.80);
+      background: rgba(255,255,255,.28);
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+
+    .dot.active { width: 30px; background: var(--gold); border-color: var(--gold); }
+
+    .story-section, .partners-section, .projects-section {
+      background: var(--creamSoft);
+      padding: 96px 6vw;
+    }
+
+    .story-wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 58px;
+      align-items: center;
+    }
+
+    .story-images { position: relative; min-height: 520px; }
+
+    .story-img-main, .story-img-small {
+      position: absolute;
+      object-fit: cover;
+      object-position: center 22%;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .story-img-main {
+      right: 0;
+      top: 0;
+      width: 78%;
+      height: 420px;
+      border-radius: 34px 34px 0 34px;
+    }
+
+    body.rtl .story-img-main { right: auto; left: 0; }
+
+    .story-img-small {
+      left: 0;
+      bottom: 0;
+      width: 58%;
+      height: 260px;
+      border: 10px solid var(--creamSoft);
+      border-radius: 28px 28px 0 28px;
+    }
+
+    body.rtl .story-img-small { left: auto; right: 0; }
+
+    .section-kicker {
+      width: 38px;
+      height: 4px;
+      background: var(--gold);
+      margin-bottom: 24px;
+      border-radius: 999px;
+    }
+
+    .story-title, .section-title {
+      color: var(--text);
+      font-size: clamp(2.2rem, 4.5vw, 4.2rem);
+      line-height: 1.08;
+      letter-spacing: -.04em;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .story-text, .section-text {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1rem;
+      max-width: 650px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .stat-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 22px 22px 0 22px;
+      padding: 22px;
+      box-shadow: 0 14px 34px rgba(30,23,13,.07);
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      text-align: center;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(200,154,44,.36);
+      box-shadow: 0 20px 46px rgba(30,23,13,.11);
+    }
+
+    .stat-number {
+      display: block;
+      color: var(--gold);
+      font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+      line-height: 1;
+      font-weight: 800;
+      margin-bottom: 8px;
+      direction: ltr;
+      unicode-bidi: embed;
+    }
+    
+    body.rtl .stat-number {
+      direction: ltr;
+      display: inline-block;
+    }
+    
+    .stat-card span:not(.stat-number) {
+      color: var(--text);
+      font-size: .9rem;
+      font-weight: 800;
+      display: block;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-head .section-kicker { margin-left: auto; margin-right: auto; }
+    .section-head .section-text { margin: 0 auto; }
+
+    .projects-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 30px 30px 0 30px;
+      overflow: hidden;
+      box-shadow: 0 16px 42px rgba(30,23,13,.07);
+      transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: rgba(200,154,44,.36);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      object-position: center 22%;
+    }
+
+    .project-body { padding: 26px; }
+
+    .project-body h3 {
+      color: var(--text);
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .project-number {
+      color: var(--gold);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .project-body p { color: var(--muted); line-height: 1.65; font-size: 0.9rem; }
+
+    .partners-section { background: var(--white); }
+
+    .partners-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .partner-card {
+      min-height: 130px;
+      background: var(--creamSoft);
+      border: 1px solid var(--line);
+      border-radius: 24px 24px 0 24px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .partner-card:hover {
+      transform: translateY(-4px);
+      background: var(--white);
+      border-color: rgba(200,154,44,.3);
+      box-shadow: 0 12px 30px rgba(30,23,13,.08);
+    }
+
+    .partner-card img {
+      max-width: 100px;
+      max-height: 44px;
+      object-fit: contain;
+    }
+
+    .partner-card span {
+      color: var(--text);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .work-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(27,24,19,.92);
+      backdrop-filter: blur(18px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
+
+    .work-lightbox.active { opacity: 1; visibility: visible; }
+
+    .lightbox-card {
+      width: min(100%, 960px);
+      background: var(--white);
+      border-radius: 34px 34px 0 34px;
+      overflow: hidden;
+      box-shadow: 0 36px 110px rgba(0,0,0,.35);
+      transform: scale(.96);
+      transition: transform .25s ease;
+    }
+
+    .work-lightbox.active .lightbox-card { transform: scale(1); }
+
+    .lightbox-card img {
+      width: 100%;
+      height: min(65vh, 580px);
+      object-fit: cover;
+      object-position: center 22%;
+    }
+
+    .lightbox-body { padding: 28px 34px 34px; }
+
+    .lightbox-body h3 {
+      color: var(--text);
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .lightbox-body p { color: var(--muted); line-height: 1.7; }
+
+    .lightbox-close {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(238,231,216,.25);
+      border-radius: 50%;
+      background: rgba(27,24,19,.8);
+      color: var(--cream);
+      cursor: pointer;
+      z-index: 3001;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    body.rtl .lightbox-close { right: auto; left: 24px; }
+
+    .footer {
+      background: var(--dark);
+      color: var(--cream);
+      padding: 48px 6vw 28px;
+      border-top: 1px solid rgba(238,231,216,.08);
+    }
+
+    .footer-inner { max-width: 1180px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.3fr .8fr .8fr 1.1fr;
+      gap: 32px;
+      align-items: start;
+      padding-bottom: 32px;
+    }
+
+    .footer-brand-block img {
+      width: 84px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 14px;
+    }
+
+    .footer-brand-block p { max-width: 300px; font-size: 0.85rem; line-height: 1.6; }
+
+    .footer h3 {
+      color: var(--cream);
+      font-size: .85rem;
+      margin-bottom: 16px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .footer p, .footer a, .footer-contact-row span:not(.material-symbols-outlined) {
+      color: rgba(238,231,216,.68);
+      line-height: 1.65;
+      font-size: .85rem;
+    }
+
+    .footer a:hover { color: var(--gold); }
+    .footer-links-list, .footer-contact-list { display: grid; gap: 10px; }
+    .footer-contact-row { display: flex; align-items: center; gap: 10px; }
+    body.rtl .footer-contact-row { flex-direction: row; justify-content: flex-start; }
+    .footer-contact-row .contact-value { direction: ltr; unicode-bidi: embed; display: inline-block; }
+    .footer-contact-row .material-symbols-outlined { color: var(--gold); font-size: 18px; flex: 0 0 auto; }
+
+    .handle { color: var(--gold) !important; font-weight: 800; letter-spacing: .04em; margin-top: 12px; }
+    .social-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+
+    .social-row a {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(238,231,216,.25);
+      border-radius: 50%;
+      color: var(--cream);
+      transition: all .25s ease;
+    }
+
+    .social-row a:hover { background: var(--gold); border-color: var(--gold); color: var(--dark); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-top: 22px;
+      border-top: 1px solid rgba(238,231,216,.1);
+    }
+
+    .copyright { color: rgba(238,231,216,.5); font-size: .8rem; }
+    .footer-bottom-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .footer-bottom-links a { color: rgba(238,231,216,.55); font-size: .8rem; }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2500;
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 12px 32px rgba(37,211,102,.32);
+      transition: transform .25s ease;
+    }
+
+    body.rtl .whatsapp-float { right: auto; left: 24px; }
+    .whatsapp-float:hover { transform: scale(1.08); }
+    .whatsapp-float svg { width: 28px; height: 28px; fill: currentColor; }
+
+    @media (max-width: 1050px) {
+      .top-nav { min-height: 80px; padding: 0 20px; }
+      .nav-left, .nav-right { gap: 20px; }
+      .top-nav a, .top-nav button { font-size: 0.7rem; letter-spacing: 0.15em; }
+      .brand img { width: 70px; height: 54px; }
+      .partners-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+    }
+    
+    @media (max-width: 880px) {
+      .nav-left, .nav-right { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .top-nav { justify-content: space-between; }
+      .hero { min-height: 520px; border-radius: 24px 24px 0 0; }
+      .hero-content { min-height: 520px; padding: 0 6vw; }
+      .story-wrap, .projects-grid { grid-template-columns: 1fr; }
+      .story-images { min-height: 460px; }
+      .projects-grid { gap: 20px; }
+    }
+
+    @media (max-width: 720px) {
+      .hero, .hero-content { min-height: 460px; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-desc { font-size: 0.9rem; }
+      .story-section, .projects-section, .partners-section { padding: 56px 20px; }
+      .story-images { min-height: auto; display: grid; gap: 16px; }
+      .story-img-main, .story-img-small {
+        position: relative;
+        width: 100%;
+        height: 280px;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        border: 0;
+      }
+      .stats-grid { grid-template-columns: 1fr; gap: 12px; }
+      .partners-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .footer { padding: 40px 20px 24px; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+      body.rtl .whatsapp-float { right: auto; left: 16px; }
+    }
+  </style>
+</head>
+<body class="notranslate" translate="no">
+  <main class="site-shell">
+    <header class="top-nav" id="topNav">
+      <nav class="nav-left">
+        <a href="index.html" class="active" data-key="nav_home" data-page="index.html">Home</a>
+        <a href="about.html" data-key="nav_about" data-page="about.html">About</a>
+        <a href="services.html" data-key="nav_services" data-page="services.html">Services</a>
+      </nav>
+
+      <a href="index.html" class="brand" aria-label="Awtar Home" data-page="index.html">
+        <img src="logo1.png" alt="Awtar Logo" onerror="this.src='https://placehold.co/110x85/1b1813/C89A2C?text=AWTAR'">
+      </a>
+
+      <nav class="nav-right">
+        <a href="gallery.html" data-key="nav_gallery" data-page="gallery.html">Gallery</a>
+        <a href="contact.html" data-key="nav_contact" data-page="contact.html">Contact</a>
+        <button id="langToggle" class="language-switch" type="button" aria-label="Switch language">
+          <span class="lang-en">EN</span><span class="lang-separator">/</span><span class="lang-ar">AR</span>
+        </button>
+      </nav>
+
+      <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Open menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </header>
+
+    <div id="mobilePanel" class="mobile-panel">
+      <a href="index.html" data-key="nav_home" data-page="index.html">Home</a>
+      <a href="about.html" data-key="nav_about" data-page="about.html">About</a>
+      <a href="services.html" data-key="nav_services" data-page="services.html">Services</a>
+      <a href="gallery.html" data-key="nav_gallery" data-page="gallery.html">Gallery</a>
+      <a href="contact.html" data-key="nav_contact" data-page="contact.html">Contact</a>
+      <button id="mobileLangToggle" class="language-switch mobile-language-switch" type="button" aria-label="Switch language">
+        <span class="lang-en">EN</span><span class="lang-separator">/</span><span class="lang-ar">AR</span>
+      </button>
+    </div>
+
+    <section class="hero">
+      <div class="hero-slide active" data-title-en="Refined Taste, Unforgettable Moments" data-title-ar="ÙØ°Ø§ÙÙ Ø±ÙÙØ¹.. ÙÙØ­Ø¸Ø§ØªÙ ÙØ§ ØªÙÙØ³Ù" data-desc-en="Premier catering and hospitality for events, gatherings, and mega-projects in the heart of Riyadh." data-desc-ar="Ø£Ø±ÙÙ Ø®Ø¯ÙØ§Øª Ø§ÙØ¶ÙØ§ÙØ© ÙØ§ÙØ¥Ø¹Ø§Ø´Ø© ÙÙÙÙØ§Ø³Ø¨Ø§ØªØ Ø§ÙØªØ¬ÙØ¹Ø§ØªØ ÙØ§ÙÙØ´Ø§Ø±ÙØ¹ Ø§ÙÙØ¨Ø±Ù ÙÙ ÙÙØ¨ Ø§ÙØ±ÙØ§Ø¶."><img src="images/1.jpeg" alt="Awtar Catering" onerror="this.src='https://images.pexels.com/photos/8252831/pexels-photo-8252831.jpeg?auto=compress&cs=tinysrgb&w=1800'"></div>
+      <div class="hero-slide" data-title-en="Warm Service, Elegant Presence" data-title-ar="ÙØ®Ø§ÙØ© Ø§ÙØ®Ø¯ÙØ©.. ÙØ£ÙØ§ÙØ© Ø§ÙØ­Ø¶ÙØ±" data-desc-en="We curate the finest flavors, exquisite service, and every subtle detail your guests will cherish." data-desc-ar="ÙØ¹ØªÙÙ Ø¨Ø¬ÙØ¯Ø© Ø§ÙÙØ°Ø§ÙØ Ø±ÙÙ Ø§ÙØ®Ø¯ÙØ©Ø ÙØ£Ø¯Ù Ø§ÙØªÙØ§ØµÙÙ Ø§ÙØªÙ ØªÙØ§ÙØ³ ÙØ´Ø§Ø¹Ø± Ø¶ÙÙÙÙÙ."><img src="images/2.jpeg" alt="Awtar Hospitality" onerror="this.src='https://images.pexels.com/photos/8252837/pexels-photo-8252837.jpeg?auto=compress&cs=tinysrgb&w=1800'"></div>
+      <div class="hero-slide" data-title-en="Prime Readiness for Riyadh's Landmark Events" data-title-ar="Ø¬Ø§ÙØ²ÙØ© ØªØ§ÙØ© ÙØ£Ø¶Ø®Ù ÙØ¹Ø§ÙÙØ§Øª Ø§ÙØ±ÙØ§Ø¶" data-desc-en="From private banquets to high-volume catering; Awtar ensures a seamless and highly professional experience." data-desc-ar="ÙÙ Ø§ÙÙØ¢Ø¯Ø¨ Ø§ÙØ®Ø§ØµØ© Ø¥ÙÙ Ø§ÙØ¥Ø¹Ø§Ø´Ø© Ø§ÙØ­Ø´Ø¯ÙØ© Ø§ÙØ¶Ø®ÙØ©Ø Ø£ÙØªØ§Ø± ØªØ¶ÙÙ ÙÙÙ ØªØ¬Ø±Ø¨Ø© Ø³ÙØ³Ø© ÙØ§Ø­ØªØ±Ø§ÙÙØ© ÙØ§Ø¦ÙØ©."><img src="images/3.jpeg" alt="Awtar Events" onerror="this.src='https://images.pexels.com/photos/31970815/pexels-photo-31970815.jpeg?auto=compress&cs=tinysrgb&w=1800'"></div>
+      <div class="hero-slide" data-title-en="Mastery in Every Plate" data-title-ar="Ø¥ØªÙØ§ÙÙ ÙØ³ÙÙ ÙÙ Ø·Ø¨Ù" data-desc-en="Innovative planning, unmatched quality, and a dedicated team that treats your event as their own." data-desc-ar="ØªØ®Ø·ÙØ· ÙØ¨ØªÙØ±Ø Ø¬ÙØ¯Ø© ÙØ§ ØªØ¶Ø§ÙÙØ ÙÙØ±ÙÙ ÙØ®ÙØµ ÙØªØ¹Ø§ÙÙ ÙØ¹ ÙÙØ§Ø³Ø¨ØªÙÙ ÙØ£ÙÙØ§ ÙÙØ§Ø³Ø¨ØªÙ Ø§ÙØ®Ø§ØµØ©."><img src="images/12.jpeg" alt="Awtar Food" onerror="this.src='https://images.pexels.com/photos/27259161/pexels-photo-27259161.jpeg?auto=compress&cs=tinysrgb&w=1800'"></div>
+      <div class="hero-slide" data-title-en="Hospitality with a Personal Soul" data-title-ar="Ø¶ÙØ§ÙØ©Ù Ø¨Ø±ÙØ­Ù Ø´Ø®ØµÙØ©" data-desc-en="A clean, sophisticated event experience inspired by the essence of authentic Saudi hospitality." data-desc-ar="ØªØ¬Ø±Ø¨Ø© ÙØ¹Ø§ÙÙØ§Øª ÙÙÙØ© ÙØ±Ø§ÙÙØ©Ø ÙØ³ØªÙÙÙØ© ÙÙ Ø£ØµÙÙ Ø§ÙØ¶ÙØ§ÙØ© Ø§ÙØ³Ø¹ÙØ¯ÙØ© Ø§ÙØ¹Ø±ÙÙØ©."><img src="images/13.jpeg" alt="Awtar Service" onerror="this.src='https://images.pexels.com/photos/13871275/pexels-photo-13871275.jpeg?auto=compress&cs=tinysrgb&w=1800'"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content"><div class="hero-copy"><div class="hero-label" data-key="hero_label">Awtar United</div><h1 id="heroTitle" class="hero-title">Refined Taste, Unforgettable Moments</h1><p id="heroDesc" class="hero-desc">Premier catering and hospitality for events, gatherings, and mega-projects in the heart of Riyadh.</p></div></div>
+      <div class="hero-dots"><button class="dot active" type="button" data-slide="0"></button><button class="dot" type="button" data-slide="1"></button><button class="dot" type="button" data-slide="2"></button><button class="dot" type="button" data-slide="3"></button><button class="dot" type="button" data-slide="4"></button></div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-wrap">
+        <div class="story-images"><img class="story-img-main" src="images/12.jpeg" alt="Awtar event catering" onerror="this.src='images/1.jpeg'"><img class="story-img-small" src="images/13.jpeg" alt="Awtar food service" onerror="this.src='images/2.jpeg'"></div>
+        <div class="story-content"><div class="section-kicker"></div><h2 class="story-title" data-key="story_title">5+ Years of Catering Riyadh's Best Events</h2><p class="story-text" data-key="story_text">We started Awtar United because we saw too many events where the food was just there. No soul, no care. So we decided to do things differently. Every plate we send out and every event we handle, we treat it like our own family gathering.</p>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <strong class="stat-number" id="statClients">0</strong>
+              <span data-key="stat_clients">Elite Clients</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number" id="statEvents">0</strong>
+              <span data-key="stat_events">Successfully Managed Events</span>
+            </div>
+            <div class="stat-card">
+              <strong class="stat-number" id="statYears">0</strong>
+              <span data-key="stat_years">Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="section-head"><div class="section-kicker"></div><h2 class="section-title" data-key="projects_title">Our Work</h2><p class="section-text" data-key="projects_text">A few events and projects our team proudly served.</p></div>
+      <div class="projects-grid">
+        <article class="project-card" data-title-en="Ministry of Defence" data-title-ar="ÙØ²Ø§Ø±Ø© Ø§ÙØ¯ÙØ§Ø¹" data-desc-en="High-efficiency management of daily and monthly catering operations (73,000 meals)." data-desc-ar="Ø¥Ø¯Ø§Ø±Ø© Ø¹ÙÙÙØ§Øª Ø§ÙØ¥Ø¹Ø§Ø´Ø© Ø§ÙØ´ÙØ±ÙØ© ÙØ§ÙÙÙÙÙØ© Ø¨ÙÙØ§Ø¡Ø© ØªÙØ¸ÙÙÙØ© Ø¹Ø§ÙÙØ© (73,000 ÙØ¬Ø¨Ø©)." data-img="images/5.jpeg"><img src="images/5.jpeg" alt="Ministry of Defence"><div class="project-body"><h3 data-key="project_1">Ministry of Defence</h3><div class="project-number">73,000</div><p data-key="project_1_text">High-efficiency management of daily and monthly catering operations.</p></div></article>
+        <article class="project-card" data-title-en="MDLBEAST" data-title-ar="ÙØ¯Ù Ø¨ÙØ³Øª" data-desc-en="Massive logistical and catering support for peak event days (100,000 beneficiaries)." data-desc-ar="Ø¯Ø¹Ù ÙÙØ¬Ø³ØªÙ ÙØºØ°Ø§Ø¦Ù Ø¶Ø®Ù ÙØ£ÙØ§Ù Ø§ÙÙØ¹Ø§ÙÙØ§Øª Ø§ÙØ°Ø±ÙØ© (100,000 ÙØ³ØªÙÙØ¯)." data-img="images/6.jpeg"><img src="images/6.jpeg" alt="Middle Beast"><div class="project-body"><h3 data-key="project_2">MDLBEAST</h3><div class="project-number">100,000</div><p data-key="project_2_text">Massive logistical and catering support for peak event days.</p></div></article>
+        <article class="project-card" data-title-en="Balad Beast" data-title-ar="Ø¨ÙØ¯ Ø¨ÙØ³Øª" data-desc-en="Exceptional hospitality providing a memorable experience for the crowds (36,000 beneficiaries)." data-desc-ar="Ø¶ÙØ§ÙØ© Ø§Ø³ØªØ«ÙØ§Ø¦ÙØ© ÙØªÙØ¯ÙÙ ØªØ¬Ø±Ø¨Ø© ÙØ§ ØªÙÙØ³Ù ÙÙØ­Ø´ÙØ¯ (36,000 ÙØ³ØªÙÙØ¯)." data-img="images/7.jpeg"><img src="images/7.jpeg" alt="Balad Beast"><div class="project-body"><h3 data-key="project_3">Balad Beast</h3><div class="project-number">36,000</div><p data-key="project_3_text">Exceptional hospitality for a memorable crowd experience.</p></div></article>
+      </div>
+    </section>
+
+    <section class="partners-section">
+      <div class="section-head"><div class="section-kicker"></div><h2 class="section-title" data-key="partners_title">Our Partners & Clients</h2><p class="section-text" data-key="partners_text">Proud to collaborate with Saudi Arabia's most prestigious organizations and entities.</p></div>
+      <div class="partners-grid"><div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/STC-01.svg/500px-STC-01.svg.png" alt="stc"><span>stc</span></div><div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Ministry_of_Economy_and_Planning_Logo.png" alt="Ministry of Economy & Planning"><span>Ministry of Economy & Planning</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSFK65BzG0N8V2sFJki_SpodO4e0fSGGJStw&s" alt="Ministry of Industry"><span>Ministry of Industry</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iybKo-wf2riHOspTrG7_7MDJFj0PmIrItw&s" alt="BSF"><span>BSF</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvWExfgR4MXN7JDUeQlR9kszqLaRRdChqPSw&s" alt="ZATCA"><span>ZATCA</span></div><div class="partner-card"><img src="https://event-media.worlddefenseshow.com/gallery/zWcv7RHoMKsY7-TfRo6LYA_Fs-WDS%202026%20Logos%20Plain.png" alt="World Defence Show"><span>World Defence Show</span></div><div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/en/4/4d/MOE_of_KSA.png" alt="Ministry of Education"><span>Ministry of Education</span></div><div class="partner-card"><img src="https://media.licdn.com/dms/image/v2/D4D0BAQFvghjhcwWefA/company-logo_200_200/company-logo_200_200/0/1719257099731?e=2147483647&v=beta&t=YkibEBQa0D5YRrryS0q9wGs3sqANcKkiQmbqs1-Xsfg" alt="TMG"><span>TMG</span></div><div class="partner-card"><img src="https://bsf.sa/ContentFiles/11588Image.png" alt="Rekab"><span>Rekab</span></div><div class="partner-card"><img src="https://www.smasco.com/en/wp-content/uploads/sites/2/2023/05/SMASCO.png" alt="SMASCO"><span>SMASCO</span></div><div class="partner-card"><img src="https://www.futuremineralsforum.com/media/202mi5vb/esnad.jpg" alt="ESNAD"><span>ESNAD</span></div><div class="partner-card"><img src="https://wasmenia.com/_next/image?url=https%3A%2F%2Fstrapi.wasmenia.com%2Fuploads%2FMobily_64f1c5a28e.svg&w=828&q=75" alt="Mobily"><span>Mobily</span></div><div class="partner-card"><img src="https://m.eyeofriyadh.com/directory/images/2024/09/1e8cd7212aed5.jpg" alt="Ministry of Justice"><span>Ministry of Justice</span></div><div class="partner-card"><img src="https://placehold.co/100x60/EEEEEE/999?text=NOFA+Riyadh" alt="NOFA Riyadh"><span>NOFA Riyadh</span></div><div class="partner-card"><img src="https://stage.maaal.com/storage/uploads/photos/news/2026-01/1853108864487081.jpg" alt="Ministry of Municipalities & Housing"><span>Ministry of Municipalities & Housing</span></div><div class="partner-card"><img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Emblem_of_Saudi_Arabia.svg" alt="Ministry of Defence"><span>Ministry of Defence</span></div><div class="partner-card"><img src="https://placehold.co/100x60/EEEEEE/999?text=Hwadi" alt="Hwadi"><span>Hwadi</span></div><div class="partner-card"><img src="https://www.big5constructsaudi.com/wp-content/uploads/sites/7/2023/06/media-partner-300x300-9-5.png" alt="Albawani"><span>Albawani</span></div><div class="partner-card"><img src="https://placehold.co/100x60/EEEEEE/999?text=NCEC" alt="NCEC"><span>NCEC</span></div><div class="partner-card"><img src="https://www.sdb.gov.sa/sdb/media/sdb/news/%D8%AE%D8%A8%D8%B1-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%A7%D8%AF%D8%A7%D8%B1%D8%A9.png" alt="Social Development Bank"><span>Social Development Bank</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-u_1bQ4skMAGi3RtRTiToyN905CJo5bizA&s" alt="Al Rajhi Bank"><span>Al Rajhi Bank</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSieaAe_5Q-t-x5uMCx_ljdd3x-VSej0M10fg&s" alt="Saudi Tadawul"><span>Saudi Tadawul Group</span></div><div class="partner-card"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSCgPzhaGPLxkYvsHGqcpwI_iqAswCrmzxfQ&s" alt="Al Jazirah"><span>Al Jazirah</span></div><div class="partner-card"><img src="https://www.mewa.gov.sa/en/Ministry/AboutMinistry/identity/MEWA%20-%20Brandmark%20-%20RGB.png" alt="MEWA"><span>MEWA</span></div><div class="partner-card"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQEDyCb-TR69uA/company-logo_200_200/company-logo_200_200/0/1630587425214?e=2147483647&v=beta&t=OxLvlKg9qQKLe6i06UgD1fn8TarRORNVYZhzVCnZCwQ" alt="Green Riyadh"><span>Green Riyadh</span></div><div class="partner-card"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQG0-9nWUGtjow/company-logo_200_200/company-logo_200_200/0/1664976791273/jtcksa_logo?e=2147483647&v=beta&t=CAh_cceBnngThgbPtZ6bpc3i923fhKip5OezZM-_vw4" alt="Judicial Training Center"><span>Judicial Training Center</span></div><div class="partner-card"><img src="https://media.licdn.com/dms/image/v2/D4D0BAQGVhDINS8CiYw/company-logo_200_200/company-logo_200_200/0/1724070883896?e=2147483647&v=beta&t=VwQjVvY--Nj2rXXofUxycL6w_5NquxwJs-HbAwG0lNU" alt="Al Basha Group"><span>Al Basha Group</span></div><div class="partner-card"><img src="https://static.wixstatic.com/media/a22522_69e0f95cdf9c4a05859d606a6f3940f6~mv2.png/v1/fit/w_2500,h_1330,al_c/a22522_69e0f95cdf9c4a05859d606a6f3940f6~mv2.png" alt="SEA Ventures"><span>SEA Ventures</span></div><div class="partner-card"><img src="https://play-lh.googleusercontent.com/C6Q7gh4RjZeJW-MaW7lLoCRsDdxatdgNm4P7Nu4Rwp16SFicJV4IX8aKYl1Bgel5UB8=w600-h300-pc0xffffff-pd" alt="Yelow"><span>Yelow</span></div></div>
+    </section>
+
+    <footer class="footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand-block"><img src="logo1.png" alt="Awtar Logo"><p data-key="footer_intro">Awtar brings catering and hospitality together for private events, companies, and large projects in Riyadh.</p><p class="handle">@awtarunited</p><div class="social-row"><a href="https://www.instagram.com/awtarunited/" target="_blank" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg></a><a href="https://x.com/awtarunited" target="_blank" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2H21.5l-7.11 8.13L22.75 22h-6.55l-5.13-6.7L5.2 22H1.94l7.6-8.69L1.5 2h6.72l4.63 6.12L18.244 2Zm-1.14 17.9h1.8L7.24 4H5.31l11.79 15.9Z"/></svg></a><a href="https://www.tiktok.com/@awtarunited" target="_blank" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82a5.35 5.35 0 0 0 3.36 1.17v3.08a8.4 8.4 0 0 1-3.42-.74v5.97A6.18 6.18 0 1 1 10.36 9.1c.35 0 .7.03 1.03.1v3.19a3.04 3.04 0 1 0 2.12 2.9V2h3.09v3.82Z"/></svg></a></div></div><div><h3 data-key="footer_services">Services</h3><div class="footer-links-list"><a href="services.html" data-key="service_1" data-page="services.html">Mega Project Catering</a><a href="services.html" data-key="service_2" data-page="services.html">Catering Services</a><a href="services.html" data-key="service_3" data-page="services.html">Hospitality Services</a></div></div><div><h3 data-key="footer_about">Pages</h3><div class="footer-links-list"><a href="index.html" data-key="nav_home" data-page="index.html">Home</a><a href="about.html" data-key="nav_about" data-page="about.html">About</a><a href="services.html" data-key="nav_services" data-page="services.html">Services</a><a href="gallery.html" data-key="nav_gallery" data-page="gallery.html">Gallery</a><a href="contact.html" data-key="nav_contact" data-page="contact.html">Contact</a></div></div><div><h3 data-key="footer_contact">Contact</h3><div class="footer-contact-list"><div class="footer-contact-row"><span class="material-symbols-outlined">call</span><a href="tel:+966564692511" class="contact-value" dir="ltr">+966 56 469 2511</a></div><div class="footer-contact-row"><span class="material-symbols-outlined">mail</span><a href="mailto:info@awtarksa.com" class="contact-value" dir="ltr">info@awtarksa.com</a></div><div class="footer-contact-row"><span class="material-symbols-outlined">location_on</span><span data-key="footer_city">Riyadh, Saudi Arabia</span></div></div></div></div><div class="footer-bottom"><p class="copyright" data-key="copyright">Â© 2026 Awtar. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy.html" data-key="privacy" data-page="privacy.html">Privacy</a><a href="terms.html" data-key="terms" data-page="terms.html">Terms</a></div></div></div></footer>
+  </main>
+  <a class="whatsapp-float" href="https://wa.me/966564692511" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3.2A12.65 12.65 0 0 0 5.1 22.2L3.5 28.8l6.75-1.58A12.66 12.66 0 1 0 16.02 3.2Zm0 2.3a10.36 10.36 0 0 1 8.78 15.86 10.34 10.34 0 0 1-13.88 3.5l-.48-.27-3.98.93.95-3.88-.32-.5A10.36 10.36 0 0 1 16.02 5.5Zm-4.1 5.3c-.23 0-.6.08-.91.43-.31.34-1.2 1.17-1.2 2.86 0 1.68 1.23 3.3 1.4 3.53.17.22 2.38 3.8 5.87 5.18 2.9 1.15 3.5.92 4.13.86.63-.06 2.03-.83 2.32-1.63.29-.8.29-1.48.2-1.63-.08-.14-.31-.23-.65-.4-.34-.17-2.03-1-2.35-1.12-.31-.12-.54-.17-.77.17-.23.34-.88 1.12-1.08 1.35-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.73-1.68-1.01-.9-1.7-2.02-1.9-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.86-1.06-2.55-.28-.67-.56-.58-.77-.59h-.73Z"/></svg></a>
+  <div id="workLightbox" class="work-lightbox"><button id="lightboxClose" class="lightbox-close" type="button"><span class="material-symbols-outlined">close</span></button><div class="lightbox-card"><img id="lightboxImg" src=""><div class="lightbox-body"><h3 id="lightboxTitle"></h3><p id="lightboxText"></p></div></div></div>
+  <script>
+    const translations = {
+      en: {
+        nav_home: 'Home', nav_about: 'About', nav_services: 'Services', nav_gallery: 'Gallery', nav_contact: 'Contact',
+        hero_label: 'Awtar United',
+        story_title: "5+ Years of Catering Riyadh's Best Events",
+        story_text: "We started Awtar United because we saw too many events where the food was just there. No soul, no care. So we decided to do things differently. Every plate we send out and every event we handle, we treat it like our own family gathering.",
+        stat_years: 'Years', stat_clients: 'Elite Clients', stat_events: 'Successfully Managed Events',
+        projects_title: 'Our Work', projects_text: 'A few events and projects our team proudly served.',
+        project_1: 'Ministry of Defence', project_1_text: 'High-efficiency management of daily and monthly catering operations.',
+        project_2: 'MDLBEAST', project_2_text: 'Massive logistical and catering support for peak event days.',
+        project_3: 'Balad Beast', project_3_text: 'Exceptional hospitality for a memorable crowd experience.',
+        partners_title: 'Our Partners & Clients', partners_text: "Proud to collaborate with Saudi Arabia's most prestigious organizations and entities.",
+        service_1: 'Mega Project Catering', service_2: 'Catering Services', service_3: 'Hospitality Services',
+        footer_intro: 'Awtar brings catering and hospitality together for private events, companies, and large projects in Riyadh.',
+        footer_services: 'Services', footer_about: 'Pages', footer_contact: 'Contact', footer_city: 'Riyadh, Saudi Arabia', privacy: 'Privacy', terms: 'Terms', copyright: 'Â© 2026 Awtar. All rights reserved.'
+      },
+      ar: {
+        nav_home: 'Ø§ÙØ±Ø¦ÙØ³ÙØ©', nav_about: 'ÙÙ ÙØ­Ù', nav_services: 'Ø§ÙØ®Ø¯ÙØ§Øª', nav_gallery: 'Ø§ÙÙØ¹Ø±Ø¶', nav_contact: 'ØªÙØ§ØµÙ ÙØ¹ÙØ§',
+        hero_label: 'Ø£ÙØªØ§Ø± Ø§ÙÙØªØ­Ø¯Ø©',
+        story_title: 'Ø£ÙØ«Ø± ÙÙ 5 Ø³ÙÙØ§Øª ÙÙ ØªÙÙÙÙ Ø£ÙØ¶Ù ÙÙØ§Ø³Ø¨Ø§Øª Ø§ÙØ±ÙØ§Ø¶',
+        story_text: 'Ø¨Ø¯Ø£ÙØ§ Ø£ÙØªØ§Ø± Ø§ÙÙØªØ­Ø¯Ø© ÙØ£ÙÙØ§ Ø´ÙÙØ§ ÙÙØ§Ø³Ø¨Ø§Øª ÙØ«ÙØ±Ø© ÙØ§Ù Ø§ÙØ·Ø¹Ø§Ù ÙÙÙØ§ ÙÙØ¬ÙØ¯ ÙÙØ·Ø Ø¨Ø¯ÙÙ Ø±ÙØ­ ÙØ¨Ø¯ÙÙ Ø§ÙØªÙØ§Ù. ÙÙØ±Ø±ÙØ§ ÙØ´ØªØºÙ Ø¨Ø·Ø±ÙÙØ© ÙØ®ØªÙÙØ©. ÙÙ Ø·Ø¨Ù ÙÙØ¯ÙÙ ÙÙÙ ÙÙØ§Ø³Ø¨Ø© ÙØ®Ø¯ÙÙØ§ ÙØªØ¹Ø§ÙÙ ÙØ¹ÙØ§ ÙØ£ÙÙØ§ ÙÙØ§Ø³Ø¨Ø© Ø¹Ø§Ø¦ÙØªÙØ§.',
+        stat_years: 'Ø³ÙÙØ§Øª', stat_clients: 'Ø¹ÙÙÙ ÙÙ Ø§ÙÙØ®Ø¨Ø©', stat_events: 'ÙØ¹Ø§ÙÙØ© ØªÙ ØªÙÙÙØ°ÙØ§ Ø¨ÙØ¬Ø§Ø­',
+        projects_title: 'Ø£Ø¹ÙØ§ÙÙØ§', projects_text: 'Ø¨Ø¹Ø¶ Ø§ÙÙØ¹Ø§ÙÙØ§Øª ÙØ§ÙÙØ´Ø§Ø±ÙØ¹ Ø§ÙØªÙ Ø®Ø¯ÙÙØ§ ÙØ±ÙÙÙØ§ Ø¨ÙÙ ÙØ®Ø±.',
+        project_1: 'ÙØ²Ø§Ø±Ø© Ø§ÙØ¯ÙØ§Ø¹', project_1_text: 'Ø¥Ø¯Ø§Ø±Ø© Ø¹ÙÙÙØ§Øª Ø§ÙØ¥Ø¹Ø§Ø´Ø© Ø§ÙØ´ÙØ±ÙØ© ÙØ§ÙÙÙÙÙØ© Ø¨ÙÙØ§Ø¡Ø© ØªÙØ¸ÙÙÙØ© Ø¹Ø§ÙÙØ©',
+        project_2: 'ÙØ¯Ù Ø¨ÙØ³Øª', project_2_text: 'Ø¯Ø¹Ù ÙÙØ¬Ø³ØªÙ ÙØºØ°Ø§Ø¦Ù Ø¶Ø®Ù ÙØ£ÙØ§Ù Ø§ÙÙØ¹Ø§ÙÙØ§Øª Ø§ÙØ°Ø±ÙØ©',
+        project_3: 'Ø¨ÙØ¯ Ø¨ÙØ³Øª', project_3_text: 'Ø¶ÙØ§ÙØ© Ø§Ø³ØªØ«ÙØ§Ø¦ÙØ© ÙØªÙØ¯ÙÙ ØªØ¬Ø±Ø¨Ø© ÙØ§ ØªÙÙØ³Ù ÙÙØ­Ø´ÙØ¯',
+        partners_title: 'Ø´Ø±ÙØ§Ø¤ÙØ§ ÙØ¹ÙÙØ§Ø¤ÙØ§', partners_text: 'ÙÙØ®Ø± Ø¨Ø§ÙØªØ¹Ø§ÙÙ ÙØ¹ ÙØ®Ø¨Ø© Ø§ÙÙÙØ¸ÙØ§Øª ÙØ§ÙØ¬ÙØ§Øª Ø§ÙÙØ±ÙÙÙØ© ÙÙ Ø§ÙÙÙÙÙØ© Ø§ÙØ¹Ø±Ø¨ÙØ© Ø§ÙØ³Ø¹ÙØ¯ÙØ©.',
+        service_1: 'ØªÙÙÙÙ Ø§ÙÙØ´Ø§Ø±ÙØ¹ Ø§ÙÙØ¨Ø±Ù', service_2: 'Ø®Ø¯ÙØ§Øª Ø§ÙØªÙÙÙÙ', service_3: 'Ø®Ø¯ÙØ§Øª Ø§ÙØ¶ÙØ§ÙØ©',
+        footer_intro: 'Ø£ÙØªØ§Ø± ØªØ¬ÙØ¹ Ø¨ÙÙ Ø§ÙØªÙÙÙÙ ÙØ§ÙØ¶ÙØ§ÙØ© ÙÙÙÙØ§Ø³Ø¨Ø§Øª Ø§ÙØ®Ø§ØµØ©Ø Ø§ÙØ´Ø±ÙØ§ØªØ ÙØ§ÙÙØ´Ø§Ø±ÙØ¹ Ø§ÙÙØ¨ÙØ±Ø© ÙÙ Ø§ÙØ±ÙØ§Ø¶.',
+        footer_services: 'Ø§ÙØ®Ø¯ÙØ§Øª', footer_about: 'Ø§ÙØµÙØ­Ø§Øª', footer_contact: 'ØªÙØ§ØµÙ ÙØ¹ÙØ§', footer_city: 'Ø§ÙØ±ÙØ§Ø¶Ø Ø§ÙÙÙÙÙØ© Ø§ÙØ¹Ø±Ø¨ÙØ© Ø§ÙØ³Ø¹ÙØ¯ÙØ©', privacy: 'Ø§ÙØ®ØµÙØµÙØ©', terms: 'Ø§ÙØ´Ø±ÙØ·', copyright: 'Â© 2026 Ø£ÙØªØ§Ø±. Ø¬ÙÙØ¹ Ø§ÙØ­ÙÙÙ ÙØ­ÙÙØ¸Ø©.'
+      }
+    };
+
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.dot');
+    const heroTitle = document.getElementById('heroTitle');
+    const heroDesc = document.getElementById('heroDesc');
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
+    const langToggle = document.getElementById('langToggle');
+    const mobileLangToggle = document.getElementById('mobileLangToggle');
+    const projectCards = document.querySelectorAll('.project-card');
+    const workLightbox = document.getElementById('workLightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxText = document.getElementById('lightboxText');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const topNav = document.getElementById('topNav');
+
+    let currentSlide = 0;
+    const params = new URLSearchParams(window.location.search);
+    const urlLang = params.get('lang');
+    const savedLang = localStorage.getItem('language');
+    let currentLang = ['en', 'ar'].includes(urlLang) ? urlLang : (['en', 'ar'].includes(savedLang) ? savedLang : 'en');
+    let timer;
+    
+    // Counter animation variables
+    let counterStarted = false;
+    const statClients = document.getElementById('statClients');
+    const statEvents = document.getElementById('statEvents');
+    const statYears = document.getElementById('statYears');
+
+    function animateCounter(element, target, suffix = '+') {
+      let current = 0;
+      const increment = Math.ceil(target / 50);
+      const interval = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          element.textContent = target + suffix;
+          clearInterval(interval);
+        } else {
+          element.textContent = current + suffix;
+        }
+      }, 30);
+    }
+
+    function checkAndStartCounters() {
+      const storySection = document.querySelector('.story-section');
+      if (!storySection) return;
+      const rect = storySection.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 100 && rect.bottom > 100;
+      
+      if (isVisible && !counterStarted) {
+        counterStarted = true;
+        animateCounter(statClients, 500, '+');
+        animateCounter(statEvents, 5000, '+');
+        animateCounter(statYears, 5, '+');
+      }
+    }
+
+    function handleScroll() {
+      window.scrollY > 30 ? topNav.classList.add('scrolled') : topNav.classList.remove('scrolled');
+      checkAndStartCounters();
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+
+    function pageUrl(page) { return currentLang === 'ar' ? `${page}?lang=ar` : `${page}?lang=en`; }
+    function syncLanguageLinks() { document.querySelectorAll('[data-page]').forEach(link => { link.setAttribute('href', pageUrl(link.dataset.page)); }); }
+    function syncUrlLanguage() { const current = new URL(window.location.href); current.searchParams.set('lang', currentLang); window.history.replaceState({ lang: currentLang }, '', current.toString()); }
+
+    function updateHero(index, animate = true) {
+      const slide = slides[index];
+      if (!slide) return;
+      if (animate) { heroTitle.classList.add('changing'); heroDesc.classList.add('changing'); }
+      setTimeout(() => {
+        const newTitle = slide.getAttribute(`data-title-${currentLang}`) || slide.getAttribute('data-title-en');
+        const newDesc = slide.getAttribute(`data-desc-${currentLang}`) || slide.getAttribute('data-desc-en');
+        if (currentLang === 'ar') {
+          heroTitle.innerHTML = newTitle;
+        } else {
+          if (newTitle.includes(',')) {
+            const parts = newTitle.split(',');
+            heroTitle.innerHTML = parts[0] + ', <span>' + parts[1].trim() + '</span>';
+          } else {
+            heroTitle.innerHTML = newTitle;
+          }
+        }
+        heroDesc.textContent = newDesc;
+        heroTitle.classList.remove('changing');
+        heroDesc.classList.remove('changing');
+      }, animate ? 180 : 0);
+    }
+
+    function showSlide(index) {
+      slides.forEach((s, i) => s.classList.toggle('active', i === index));
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      currentSlide = index;
+      updateHero(index);
+    }
+
+    function startSlider() { clearInterval(timer); timer = setInterval(() => showSlide((currentSlide + 1) % slides.length), 5400); }
+    dots.forEach(dot => { dot.addEventListener('click', () => { showSlide(Number(dot.dataset.slide)); startSlider(); }); });
+
+    function openLightbox(card) {
+      lightboxImg.src = card.dataset.img;
+      lightboxTitle.textContent = card.getAttribute(`data-title-${currentLang}`) || card.dataset.titleEn;
+      lightboxText.textContent = card.getAttribute(`data-desc-${currentLang}`) || card.dataset.descEn;
+      workLightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() { workLightbox.classList.remove('active'); document.body.style.overflow = ''; }
+    projectCards.forEach(card => card.addEventListener('click', () => openLightbox(card)));
+    lightboxClose.addEventListener('click', closeLightbox);
+    workLightbox.addEventListener('click', e => { if (e.target === workLightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    function updateLanguage(lang) {
+      if (!['en', 'ar'].includes(lang)) lang = 'en';
+      currentLang = lang;
+      localStorage.setItem('language', lang);
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+      });
+      if (lang === 'ar') {
+        document.body.classList.add('rtl');
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+        document.title = 'Ø£ÙØªØ§Ø± Ø§ÙÙØªØ­Ø¯Ø© | Ø§ÙØªÙÙÙÙ ÙØ§ÙØ¶ÙØ§ÙØ©';
+      } else {
+        document.body.classList.remove('rtl');
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', 'en');
+        document.title = 'Awtar United | Catering & Hospitality';
+      }
+      syncLanguageLinks();
+      syncUrlLanguage();
+      updateHero(currentSlide, false);
+    }
+
+    langToggle.addEventListener('click', () => updateLanguage(currentLang === 'en' ? 'ar' : 'en'));
+    mobileLangToggle.addEventListener('click', () => updateLanguage(currentLang === 'en' ? 'ar' : 'en'));
+    mobileBtn.addEventListener('click', () => mobilePanel.classList.toggle('open'));
+    document.addEventListener('click', (event) => {
+      if (mobilePanel.classList.contains('open') && !mobilePanel.contains(event.target) && !mobileBtn.contains(event.target))
+        mobilePanel.classList.remove('open');
+    });
+
+    updateLanguage(currentLang);
+    startSlider();
+    // Reset counter when language changes (numbers remain the same format)
+  </script>
+</body>
+</html>
