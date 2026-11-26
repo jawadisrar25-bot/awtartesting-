@@ -1,0 +1,8 @@
+app/
+bin/
+database/
+tests/
+*.py
+*.bak
+composer.json
+.env.example
